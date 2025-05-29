@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
 
 const colorMode = useColorMode();
 
@@ -13,12 +13,12 @@ const isDark = computed({
 });
 
 const menuitems = [
-  { title: "Who We Are", path: "/who-we-are", hasDropdown: false },
-  { title: "Our Services", path: "/what-we-do", hasDropdown: true },
-  { title: "Our Work", path: "/projects", hasDropdown: false },
-  { title: "Sectors", path: "/services", hasDropdown: true },
-  { title: "Why PPIL", path: "/careers", hasDropdown: false },
-  { title: "Contact Us", path: "/contact", hasDropdown: false },
+  { title: "HOME", path: "/", hasDropdown: false },
+  { title: "WHO WE ARE", path: "/who-we-are", hasDropdown: false },
+  { title: "WHAT WE DO", path: "/what-we-do", hasDropdown: false },
+  { title: "OUR WORK", path: "/our-work", hasDropdown: false },
+  { title: "OUR TEAM", path: "/our-team", hasDropdown: false },
+  { title: "CONTACT US", path: "/contact", hasDropdown: false },
 ];
 
 const open = ref(false);
@@ -45,10 +45,10 @@ onUnmounted(() => {
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <header class="flex items-center justify-between py-2">
         <!-- Logo section without background -->
-        <div class="flex-shrink-0">
-          <a href="/" class="inline-block">
-            <img src="~/assets/img/PPIL Logo.svg" alt="PPIL Logo" class="h-12 md:h-14" :class="{ 'invert': isDark }" />
-          </a>
+        <div class="bg-white/70 px-3 py-2 rounded-md inline-block">
+          <NuxtLink to="/" class="inline-block">
+            <img src="~/assets/img/PPIL Logo.svg" alt="PPIL Logo" class="h-12 md:h-14 drop-shadow-lg" />
+          </NuxtLink>
         </div>
 
         <!-- Desktop Navigation - center fixed with reduced height -->
@@ -56,11 +56,10 @@ onUnmounted(() => {
           <ul class="flex space-x-6 lg:space-x-8">
             <li v-for="item in menuitems" :key="item.title">
               <NuxtLink :to="item.path"
-                class="text-sm lg:text-base font-medium transition-colors duration-200 flex items-center whitespace-nowrap"
+                class="text-sm lg:text-base transition-colors duration-200 flex items-center whitespace-nowrap font-medium"
                 :class="{
                   'text-black': (!isDark && scrolled),
-                  'text-gray-900': (!isDark && !scrolled),
-                  'text-white': (isDark && scrolled) || (isDark && !scrolled),
+                  'text-white': (!isDark && !scrolled) || (isDark && !scrolled) || (isDark && scrolled),
                   'hover:text-primary': true
                 }">
                 {{ item.title }}
@@ -68,8 +67,7 @@ onUnmounted(() => {
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"
                     :class="{
                       'text-black': (!isDark && scrolled),
-                      'text-gray-900': (!isDark && !scrolled),
-                      'text-white': (isDark && scrolled) || (isDark && !scrolled)
+                      'text-white': (!isDark && !scrolled) || (isDark && scrolled) || (isDark && !scrolled)
                     }">
                     <path fill-rule="evenodd"
                       d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -122,20 +120,24 @@ onUnmounted(() => {
         </div>
       </header>
 
-      <!-- Mobile Menu with updated text colors -->
+      <!-- Mobile Menu with fixed text colors -->
       <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95"
         enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75"
         leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
         <div v-show="open" class="md:hidden mt-2 py-2 rounded-lg shadow-lg"
           :class="{ 'bg-white/95': !isDark, 'bg-gray-900/95': isDark }">
           <div v-for="item in menuitems" :key="item.title" class="block">
-            <NuxtLink :to="item.path" class="block px-4 py-3 text-sm font-medium flex justify-between"
-              :class="{ 'text-black hover:text-primary': !isDark && scrolled, 'text-gray-900 hover:text-primary': !isDark && !scrolled, 'text-white hover:text-yellow-400': isDark }"
-              @click="open = false">
+            <NuxtLink :to="item.path" class="block px-4 py-3 text-sm font-medium flex justify-between items-center"
+              :class="{
+                'text-gray-900 hover:text-primary': !isDark,
+                'text-gray-100 hover:text-primary': isDark
+              }" @click="open = false">
               {{ item.title }}
               <span v-if="item.hasDropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"
-                  :class="{ 'text-black': !isDark && scrolled, 'text-gray-900': !isDark && !scrolled, 'text-white': isDark }">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" :class="{
+                  'text-gray-900': !isDark,
+                  'text-gray-100': isDark
+                }">
                   <path fill-rule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                     clip-rule="evenodd" />
@@ -156,12 +158,19 @@ onUnmounted(() => {
   left: 50%;
   transform: translateX(-50%);
   z-index: 51;
-  margin-top: -0.5rem; /* Move items up slightly */
+  margin-top: -0.5rem;
+  /* Move items up slightly */
 }
 
 /* Active link */
-:deep(.router-link-active:not(.bg-yellow)) {
-  color: var(--color-primary);
+:deep(.router-link-active) {
+  color: #E6A619 !important;
+  font-weight: 600;
+}
+
+.bg-white\/95 a.router-link-active,
+.bg-gray-900\/95 a.router-link-active {
+  color: #E6A619 !important;
 }
 
 /* Transitions */
@@ -170,5 +179,23 @@ button {
   transition-property: color, background-color, border-color;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Override Tailwind classes for pure black */
+.text-black {
+  color: #000000 !important;
+}
+
+/* Ensure mobile menu contrast */
+@media (max-width: 767px) {
+  .bg-white\/95 a {
+    color: #111827 !important;
+    /* Almost black for contrast */
+  }
+
+  .bg-gray-900\/95 a {
+    color: #f3f4f6 !important;
+    /* Light gray for contrast */
+  }
 }
 </style>

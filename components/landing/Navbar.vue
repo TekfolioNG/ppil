@@ -46,9 +46,9 @@ onUnmounted(() => {
       <header class="flex items-center justify-between py-2">
         <!-- Logo section without background -->
         <div class="bg-white/70 px-3 py-2 rounded-md inline-block">
-          <a href="/" class="inline-block">
+          <NuxtLink to="/" class="inline-block">
             <img src="~/assets/img/PPIL Logo.svg" alt="PPIL Logo" class="h-12 md:h-14 drop-shadow-lg" />
-          </a>
+          </NuxtLink>
         </div>
 
         <!-- Desktop Navigation - center fixed with reduced height -->
