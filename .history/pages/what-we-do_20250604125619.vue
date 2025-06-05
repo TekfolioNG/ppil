@@ -87,7 +87,7 @@
         <!-- Design & Planning -->
         <div class="flex flex-col md:flex-row items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=design-planning class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 id=#design-planning class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Design & Planning
             </h2>
@@ -122,7 +122,7 @@
         <!-- Construction & Project Planning -->
         <div class="flex flex-col md:flex-row-reverse items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=construction-project class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 id=#construction-project class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Construction & Project Planning
             </h2>
@@ -155,7 +155,7 @@
         <!-- Renovation & Upgrades -->
         <div class="flex flex-col md:flex-row items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=renovation-upgrades class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 id=#renovation-upgrades class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Renovation & Upgrades
             </h2>
@@ -189,7 +189,7 @@
         <!-- Facility Audit / Condition Survey -->
         <div class="flex flex-col md:flex-row-reverse items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=facility-management class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Facility Audit/Condition Survey
             </h2>
@@ -222,7 +222,7 @@
         <!-- Facility Management -->
         <div class="flex flex-col md:flex-row items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=facility-mgt class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Facility Management
             </h2>
@@ -255,7 +255,7 @@
         <!-- Engineering & Procurement Consultancy -->
         <div class="flex flex-col md:flex-row-reverse items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=engineering-procurement class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Engineering & Procurement Consultancy
             </h2>
@@ -288,7 +288,7 @@
         <!-- Import & Export -->
         <div class="flex flex-col md:flex-row items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=import-export class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Import & Export
             </h2>
@@ -321,7 +321,7 @@
         <!-- General Contractor -->
         <div class="flex flex-col md:flex-row-reverse items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=general-contractor class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               General Contractor
             </h2>
@@ -368,7 +368,7 @@
             class="bg-[#E6A619] hover:bg-[#FFB81C] text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             Contact Our Team
           </NuxtLink>
-          <NuxtLink to="/our-work"
+          <NuxtLink to="/projects"
             class="border-2 border-white hover:bg-white hover:text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             View Our Projects
           </NuxtLink>

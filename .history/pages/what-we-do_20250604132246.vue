@@ -368,7 +368,7 @@
             class="bg-[#E6A619] hover:bg-[#FFB81C] text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             Contact Our Team
           </NuxtLink>
-          <NuxtLink to="/our-work"
+          <NuxtLink to="/projects"
             class="border-2 border-white hover:bg-white hover:text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             View Our Projects
           </NuxtLink>

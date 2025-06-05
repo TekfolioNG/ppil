@@ -8,7 +8,7 @@
                     <h3 class="caption-title">We are mission-focused, team-driven, and powered by expertise and
                         resilience.</h3>
                     <div class="cta-container">
-                        <NuxtLink to="/our-work" class="primary-cta">Our Portfolio</NuxtLink>
+                        <NuxtLink to="/what-we-do" class="primary-cta">Our Portfolio</NuxtLink>
                         <NuxtLink to="/contact" class="secondary-cta">Start a Project</NuxtLink>
                     </div>
                 </div>

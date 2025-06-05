@@ -178,7 +178,7 @@
                             across diverse project scopes.
                         </p>
                         <div class="mt-auto text-center">
-                            <NuxtLink to="/what-we-do#general-contractor"
+                            <NuxtLink to="/services/sustainable-construction"
                                 class="learn-more-link inline-flex items-center text-[#002244] font-semibold hover:text-[#B51C1C] transition-colors group">
                                 <span class="text-sm">LEARN MORE</span>
                                 <span

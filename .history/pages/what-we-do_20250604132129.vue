@@ -288,7 +288,7 @@
         <!-- Import & Export -->
         <div class="flex flex-col md:flex-row items-stretch">
           <div class="w-full md:w-1/2 p-8 md:p-12 bg-white">
-            <h2 id=import-export class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
               style="font-family: 'Barlow Condensed', sans-serif;">
               Import & Export
             </h2>
@@ -368,7 +368,7 @@
             class="bg-[#E6A619] hover:bg-[#FFB81C] text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             Contact Our Team
           </NuxtLink>
-          <NuxtLink to="/our-work"
+          <NuxtLink to="/projects"
             class="border-2 border-white hover:bg-white hover:text-[#002244] font-bold py-3 px-8 rounded-md transition-colors">
             View Our Projects
           </NuxtLink>

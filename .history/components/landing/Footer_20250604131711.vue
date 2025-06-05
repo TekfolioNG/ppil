@@ -83,13 +83,13 @@
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/what-we-do#facility-management" class="text-gray-300 hover:text-white transition-colors">
+              <NuxtLink to="/what-we-do#facility-audit" class="text-gray-300 hover:text-white transition-colors">
                 Facility Audit/
                 Condition Survey
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/what-we-do#facility-mgt" class="text-gray-300 hover:text-white transition-colors">
+              <NuxtLink to="/what-we-do#facility-management" class="text-gray-300 hover:text-white transition-colors">
                 Facility Management
               </NuxtLink>
             </li>
