@@ -84,11 +84,13 @@ const submitForm = async (event) => {
   } catch (error) {
     console.error('Network/Fetch Error:', error)
 
+    // If it's a network error but the form might have been submitted
+    // (since you mentioned emails are being delivered), show a different message
     formStatus.value = {
       loading: false,
       success: false,
       error: true,
-      message: 'Your message have been sent. If you don\'t receive a response within 24 hours, please contact us directly.'
+      message: 'Your message may have been sent, but we could not confirm delivery. If you don\'t receive a response within 24 hours, please try again or contact us directly.'
     }
   }
 }
